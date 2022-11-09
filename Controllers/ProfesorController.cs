@@ -44,8 +44,8 @@ public class ProfesorController : ControllerBase
         if (id != Profesor.Id)
             return BadRequest();
             
-        var existingPizza = ProfesorService.Get(id);
-        if(existingPizza is null)
+        var existingProfesor = ProfesorService.Get(id);
+        if(existingProfesor is null)
             return NotFound();
     
         ProfesorService.Update(Profesor);           

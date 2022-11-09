@@ -44,8 +44,8 @@ public class AlumnoController : ControllerBase
         if (id != Alumno.Id)
             return BadRequest();
             
-        var existingPizza = AlumnoService.Get(id);
-        if(existingPizza is null)
+        var existingAlumno = AlumnoService.Get(id);
+        if(existingAlumno is null)
             return NotFound();
     
         AlumnoService.Update(Alumno);           
