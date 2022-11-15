@@ -23,7 +23,7 @@ public class ProfesorController : ControllerBase
     {
         var Profesor = ProfesorService.Get(id);
 
-        if(Profesor == null)
+        if (Profesor == null)
             return NotFound();
 
         return Profesor;
@@ -32,7 +32,7 @@ public class ProfesorController : ControllerBase
     // POST action
     [HttpPost]
     public IActionResult Create(Profesor Profesor)
-    {            
+    {
         ProfesorService.Add(Profesor);
         return CreatedAtAction(nameof(Create), new { id = Profesor.Id }, Profesor);
     }
@@ -43,26 +43,26 @@ public class ProfesorController : ControllerBase
     {
         if (id != Profesor.Id)
             return BadRequest();
-            
+
         var existingProfesor = ProfesorService.Get(id);
-        if(existingProfesor is null)
+        if (existingProfesor is null)
             return NotFound();
-    
-        ProfesorService.Update(Profesor);           
-    
-        return NoContent();
+
+        ProfesorService.Update(Profesor);
+
+        return Ok(existingProfesor);
     }
     // DELETE action
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
         var Profesor = ProfesorService.Get(id);
-    
+
         if (Profesor is null)
             return NotFound();
-        
+
         ProfesorService.Delete(id);
-    
-        return NoContent();
+
+        return Ok(Profesor);
     }
 }
