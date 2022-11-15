@@ -23,7 +23,7 @@ public class AlumnoController : ControllerBase
     {
         var Alumno = AlumnoService.Get(id);
 
-        if(Alumno == null)
+        if (Alumno == null)
             return NotFound();
 
         return Alumno;
@@ -32,7 +32,7 @@ public class AlumnoController : ControllerBase
     // POST action
     [HttpPost]
     public IActionResult Create(Alumno Alumno)
-    {            
+    {
         AlumnoService.Add(Alumno);
         return CreatedAtAction(nameof(Create), new { id = Alumno.Id }, Alumno);
     }
@@ -43,26 +43,26 @@ public class AlumnoController : ControllerBase
     {
         if (id != Alumno.Id)
             return BadRequest();
-            
+
         var existingAlumno = AlumnoService.Get(id);
-        if(existingAlumno is null)
+        if (existingAlumno is null)
             return NotFound();
-    
-        AlumnoService.Update(Alumno);           
-    
-        return NoContent();
+
+        AlumnoService.Update(Alumno);
+
+        return Ok(existingAlumno);
     }
     // DELETE action
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
         var Alumno = AlumnoService.Get(id);
-    
+
         if (Alumno is null)
             return NotFound();
-        
+
         AlumnoService.Delete(id);
-    
-        return NoContent();
+
+        return Ok(Alumno);
     }
 }
