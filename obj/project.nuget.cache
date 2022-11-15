@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9m5iHXgYNG5a4ZYJwWEoZ/tNs8X4wAYrGqlvCzPF6BNB0jnRyY8q3ajoAgNVzO/2SwY53eDaSbOPDUoV9GRa9A==",
+  "dgSpecHash": "7i2L73CM5/DGi/Gr6rVmSFlQDsfFojnOWUCxpuCMPYwuiNWWuGC/AVwZcbOAySJVMR2y5HmCwsEdsW3/vELaKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\IGNITER\\Documents\\Tareas\\Noveno\\AWS\\entrega1\\entrega1.csproj",
   "expectedPackageFiles": [
@@ -9,10 +9,7 @@
     "C:\\Users\\IGNITER\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\IGNITER\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\IGNITER\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "C:\\Users\\IGNITER\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
-    "C:\\Users\\IGNITER\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-musl-x64\\6.0.1\\microsoft.netcore.app.runtime.linux-musl-x64.6.0.1.nupkg.sha512",
-    "C:\\Users\\IGNITER\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-musl-x64\\6.0.1\\microsoft.aspnetcore.app.runtime.linux-musl-x64.6.0.1.nupkg.sha512",
-    "C:\\Users\\IGNITER\\.nuget\\packages\\microsoft.netcore.app.host.linux-musl-x64\\6.0.1\\microsoft.netcore.app.host.linux-musl-x64.6.0.1.nupkg.sha512"
+    "C:\\Users\\IGNITER\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
   ],
   "logs": []
 }
