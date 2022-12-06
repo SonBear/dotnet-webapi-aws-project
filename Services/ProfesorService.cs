@@ -5,18 +5,23 @@ namespace entrega1.Services;
 public static class ProfesorService
 {
     static List<Profesor> Profesores { get; }
+
+    private static DatabaseContext Database;
+
     static ProfesorService()
     {
         Profesores = new List<Profesor> { };
+        Database = new DatabaseContext();
     }
 
-    public static List<Profesor> GetAll() => Profesores;
+    public static List<Profesor> GetAll() => Database.Profesores.OrderBy(a => a.Id).ToList();
 
-    public static Profesor? Get(int id) => Profesores.FirstOrDefault(p => p.Id == id);
+    public static Profesor? Get(int id) => Database.Profesores.Find(id);
 
     public static void Add(Profesor Profesor)
     {
-        Profesores.Add(Profesor);
+        Database.Profesores.Add(Profesor);
+        Database.SaveChanges();
     }
 
     public static void Delete(int id)
@@ -25,15 +30,17 @@ public static class ProfesorService
         if (Profesor is null)
             return;
 
-        Profesores.Remove(Profesor);
+        Database.Profesores.Remove(Profesor);
+        Database.SaveChanges();
     }
 
-    public static void Update(Profesor Profesor)
+    public static Profesor Update(Profesor ProfesorDB, Profesor Profesor)
     {
-        var index = Profesores.FindIndex(p => p.Id == Profesor.Id);
-        if (index == -1)
-            return;
-
-        Profesores[index] = Profesor;
+        ProfesorDB.ClaseHrs = Profesor.ClaseHrs;
+        ProfesorDB.LastNames = Profesor.LastNames;
+        ProfesorDB.Names = Profesor.Names;
+        ProfesorDB.EmployeeNum = Profesor.EmployeeNum;
+        Database.SaveChanges();
+        return ProfesorDB;
     }
 }

@@ -1,6 +1,9 @@
 namespace entrega1.Models;
+
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
+[Table("Profesores")]
 public class Profesor
 {
     [JsonPropertyName("id")]

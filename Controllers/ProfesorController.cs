@@ -41,16 +41,11 @@ public class ProfesorController : ControllerBase
     [HttpPut("{id}")]
     public IActionResult Update(int id, Profesor Profesor)
     {
-        if (id != Profesor.Id)
-            return BadRequest();
-
         var existingProfesor = ProfesorService.Get(id);
         if (existingProfesor is null)
             return NotFound();
 
-        ProfesorService.Update(Profesor);
-
-        return Ok(existingProfesor);
+        return Ok(ProfesorService.Update(existingProfesor, Profesor));
     }
     // DELETE action
     [HttpDelete("{id}")]

@@ -1,22 +1,25 @@
 using entrega1.Models;
-
 namespace entrega1.Services;
 
 public static class AlumnoService
 {
     static List<Alumno> Alumnos { get; }
+    private static DatabaseContext Database;
+
     static AlumnoService()
     {
+        Database = new DatabaseContext();
         Alumnos = new List<Alumno> { };
     }
 
-    public static List<Alumno> GetAll() => Alumnos;
+    public static List<Alumno> GetAll() => Database.Alumnos.OrderBy(a => a.Id).ToList();
 
-    public static Alumno? Get(int id) => Alumnos.FirstOrDefault(p => p.Id == id);
+    public static Alumno? Get(int id) => Database.Alumnos.Find(id);
 
     public static void Add(Alumno Alumno)
     {
-        Alumnos.Add(Alumno);
+        Database.Alumnos.Add(Alumno);
+        Database.SaveChanges();
     }
 
     public static void Delete(int id)
@@ -25,15 +28,17 @@ public static class AlumnoService
         if (Alumno is null)
             return;
 
-        Alumnos.Remove(Alumno);
+        Database.Alumnos.Remove(Alumno);
+        Database.SaveChanges();
     }
 
-    public static void Update(Alumno Alumno)
+    public static Alumno? Update(Alumno AlumnoDB, Alumno Alumno)
     {
-        var index = Alumnos.FindIndex(p => p.Id == Alumno.Id);
-        if (index == -1)
-            return;
-
-        Alumnos[index] = Alumno;
+        AlumnoDB.GradeAvg = Alumno.GradeAvg;
+        AlumnoDB.LastNames = Alumno.LastNames;
+        AlumnoDB.Names = Alumno.Names;
+        AlumnoDB.Tuition = Alumno.Tuition;
+        Database.SaveChanges();
+        return AlumnoDB;
     }
 }

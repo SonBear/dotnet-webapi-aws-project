@@ -1,8 +1,13 @@
 namespace entrega1.Models;
+
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+
+[Table("Alumnos")]
 public class Alumno
 {
     [JsonPropertyName("id")]
+
     public int Id { get; set; }
 
     [JsonPropertyName("nombres")]
