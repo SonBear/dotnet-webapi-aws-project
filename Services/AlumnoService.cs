@@ -41,4 +41,21 @@ public static class AlumnoService
         Database.SaveChanges();
         return AlumnoDB;
     }
+
+    public static async Task<Alumno> UploadPicture(Alumno Alumno, IFormFile foto)
+    {
+        try
+        {
+            string urlFile = await S3Service.UploadFileAsync(foto);
+            Alumno.profilePicture = urlFile;
+            Database.SaveChanges();
+            return Alumno;
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            throw new Exception();
+        }
+    }
 }

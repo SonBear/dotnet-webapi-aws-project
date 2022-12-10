@@ -8,12 +8,32 @@
     ".NETCoreApp,Version=v6.0": {
       "entrega1/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "3.7.101.33",
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
           "entrega1.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.102.1": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.102.1"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.101.33": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.102.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.101.33"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -318,6 +338,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.7.102.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UM7r6/h34Xz5059y8e0dEIoA7pu8hb3Cr8ban9s3rS886KhgpE+HQK/ekD21LBj8ztq54fUHk5sN0Of5rcbtHg==",
+      "path": "awssdk.core/3.7.102.1",
+      "hashPath": "awssdk.core.3.7.102.1.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.101.33": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qhEd7NJ/kg6aureP9OQhH2pr2FlqILQdvSoXHyx5oDvTW32rHRBQAj3WDn5PhOc2M9cmVCQJPOKMjPC+PH4UwQ==",
+      "path": "awssdk.s3/3.7.101.33",
+      "hashPath": "awssdk.s3.3.7.101.33.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

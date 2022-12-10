@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using entrega1.Models;
 using entrega1.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -60,4 +61,23 @@ public class AlumnoController : ControllerBase
 
         return Ok(Alumno);
     }
+
+    [HttpPost("{id}/fotoPerfil")]
+    public async Task<IActionResult> UploadPictureAsync(int id, IFormFile foto)
+    {
+        var Alumno = AlumnoService.Get(id);
+
+        if (Alumno is null)
+            return NotFound();
+
+        var task = AlumnoService.UploadPicture(Alumno, foto);
+        if (await Task.WhenAny(task, Task.Delay(10000)) == task)
+        {
+            // task completed within timeout
+            var alumno = await task;
+            return Ok(alumno);
+        }
+        return StatusCode(StatusCodes.Status500InternalServerError);
+    }
+
 }

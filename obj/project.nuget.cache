@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8tgramruVUmtM7MBZXUnjN5GPHd4jckfHMnwGjWzEcJbnGkNdWwk1k8n7XQWr0wwRzsTyMb2dDrBns0JGod+ug==",
+  "dgSpecHash": "o99Gr8pC6aA92LTT4EjU+SKy92LAUBYSNUqiHMuFFJn1n+2CZ8ltsuBrWYJIIoGBUc0YjWSoq7cAG37i49yOaQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\IGNITER\\Documents\\Tareas\\Noveno\\AWS\\entrega1\\entrega1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\IGNITER\\.nuget\\packages\\awssdk.core\\3.7.102.1\\awssdk.core.3.7.102.1.nupkg.sha512",
+    "C:\\Users\\IGNITER\\.nuget\\packages\\awssdk.s3\\3.7.101.33\\awssdk.s3.3.7.101.33.nupkg.sha512",
     "C:\\Users\\IGNITER\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\IGNITER\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\IGNITER\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",

@@ -47,3 +47,5 @@ C:\Users\IGNITER\Documents\Tareas\Noveno\AWS\entrega1\bin\Debug\net6.0\System.Co
 C:\Users\IGNITER\Documents\Tareas\Noveno\AWS\entrega1\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\IGNITER\Documents\Tareas\Noveno\AWS\entrega1\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\IGNITER\Documents\Tareas\Noveno\AWS\entrega1\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\IGNITER\Documents\Tareas\Noveno\AWS\entrega1\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\IGNITER\Documents\Tareas\Noveno\AWS\entrega1\bin\Debug\net6.0\AWSSDK.S3.dll

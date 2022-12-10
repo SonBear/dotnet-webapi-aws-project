@@ -1,5 +1,6 @@
 namespace entrega1.Models;
 
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
@@ -21,4 +22,7 @@ public class Alumno
 
     [JsonPropertyName("promedio")]
     public double GradeAvg { get; set; }
+
+    [JsonPropertyName("fotoPerfilUrl"), DefaultValue("")]
+    public string? profilePicture { get; set; }
 }
