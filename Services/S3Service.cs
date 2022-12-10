@@ -8,7 +8,7 @@ public static class S3Service
     private static string ObjectName;
     static S3Service()
     {
-        Client = new AmazonS3Client("ASIAVJ47HDML7E3TQJFQ", "ji5t0p87avPoTGpyEwnyvcm07EwbwHlm/ZCkkdP3", "FwoGZXIvYXdzEGUaDFk2NadqcQRlbCkVbCLLAVyuRFyCqUA2XkAn19aI5kVDFIMWToMAJgqL8VFCA7Qmbm1xxJUI0+LDIhUYwHfnmcgaVfr4ulvS44ge22w8v9EO5K1c+OQ9EVdRFlsF960MwPTZ99vMQX3erw8byxInotWP/+NgtZ/t7n7ZrgDr8hSJ5ovSZKjencScXj9y/+lGdAhaVEAlggsDPiXXNbUy1mAHp9AvUnDiuzOnogxjAA4R27k+ZYZzt2kjEcj5+uXEsHBqdKWQrmDIUpXiMIgc9cDxJKUViBRLlUYRKP2705wGMi2MUzBaGQJ1uWY6l/G+zgrOy2oKqoUyh9SwkaBmLiRrMSuKfvR8kKEhpQ3G0F0=", Amazon.RegionEndpoint.USEast1);
+        Client = new AmazonS3Client("KEY ID", "SESSION SECRET ID", "TEMP SESSION ID", Amazon.RegionEndpoint.USEast1);
         BucketName = "sicei";
         ObjectName = "profile picture";
     }
